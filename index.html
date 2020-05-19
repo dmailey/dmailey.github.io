@@ -217,37 +217,5 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
-
-<script>
-    var skillsArr = [
-        'A/B testing within Adobe Target',
-        'Front-end development',
-        'Responsive web design',
-        'Web content management',
-        'Back-end development',
-        'Ecommerce application development',
-        'Google Analytics',
-        'Mockup/wireframing',
-        'Graphic design',
-        'Project management & strong collaborative skills',
-        'Excellent problem solving skills',
-        'Experience with APIs',
-        'OOP mindset with MVC framework experience',
-        'Adobe Creative Suite'
-    ],
-    halfArr = Math.floor(skillsArr.length / 2),
-    skillset_1 = '', skillset_2 = '';
-
-    for (var i = 0; i < skillsArr.length; i++) {
-        if (i < halfArr) {
-            skillset_1 += '<li>' + skillsArr[i] + '</li>';
-        } else {
-            skillset_2 += '<li>' + skillsArr[i] + '</li>';
-        }
-    }
-
-    document.querySelector('.skillset-1').innerHTML = skillset_1;
-    document.querySelector('.skillset-2').innerHTML = skillset_2;
-</script>
 </body>
 </html>
