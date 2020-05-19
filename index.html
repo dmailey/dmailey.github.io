@@ -79,8 +79,14 @@
                 <hr class="light wow bounceIn">
                 <img src="img/photo.jpg" class="img-circle"> <br>
                 <div id="social"> <a href="http://www.twitter.com/@davemailey" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn" data-wow-delay=".1s"></i></a> <a href="https://www.linkedin.com/in/davemailey" target="_blank"><i class="fa fa-2x fa-linkedin-square wow bounceIn" data-wow-delay=".2s"></i></a> </div>
-                <p class="text-faded">Hi, my name is Dave Mailey and I am an Orlando based web developer with an unbridled enthusiasm for learning new and upcoming web technologies and techniques.</p>
-                <p class="text-faded">My skillset ranges from designing the front-end world with HTML + CSS + JavaScript to developing the back-end realm with PHP + MySQL.</p>
+                <p class="text-faded">Hi! My name is Dave Mailey and I am an Orlando based web developer with an unbridled enthusiasm for learning new and upcoming web technologies and techniques.</p>
+                <p class="text-faded">My skillset includes the following:</p>
+                <div class="col-xs-6">
+                    <ul class="skillset skillset-1"></ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="skillset skillset-2"></ul>
+                </div>
             </div>
         </div>
     </div>
@@ -199,5 +205,37 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<script>
+    var skillsArr = [
+        'A/B testing within Adobe Target',
+        'Front-end development',
+        'Responsive web design',
+        'Web content management',
+        'Back-end development',
+        'Ecommerce application development',
+        'Google Analytics',
+        'Mockup/wireframing',
+        'Graphic design',
+        'Project management & strong collaborative skills',
+        'Excellent problem solving skills',
+        'Experience with APIs',
+        'OOP mindset with MVC framework experience',
+        'Adobe Creative Suite'
+    ],
+    halfArr = Math.floor(skillsArr.length / 2),
+    skillset_1 = '', skillset_2 = '';
+
+    for (var i = 0; i < skillsArr.length; i++) {
+        if (i < halfArr) {
+            skillset_1 += '<li>' + skillsArr[i] + '</li>';
+        } else {
+            skillset_2 += '<li>' + skillsArr[i] + '</li>';
+        }
+    }
+
+    document.querySelector('.skillset-1').innerHTML = skillset_1;
+    document.querySelector('.skillset-2').innerHTML = skillset_2;
+</script>
 </body>
 </html>
